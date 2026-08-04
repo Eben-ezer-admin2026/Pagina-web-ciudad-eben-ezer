@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noticias | IEM Ciudad Eben Ezer</title>
+
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <style>
+        body{
+            opacity:0;
+            animation:fadeIn .6s ease forwards;
+        }
+
+        @keyframes fadeIn{
+            to{
+                opacity:1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header class="header">
+    <div class="navbar-unificada">
+
+        <div class="navbar-left">
+            <img src="assets/img/escudo.png" alt="Logo Institución" class="logo">
+
+            <div class="navbar-texto">
+                <h1>IEM Ciudad Eben Ezer</h1>
+                <p>Fusagasugá - Institución Educativa Municipal</p>
+            </div>
+        </div>
+
+        <nav class="navbar-right">
+            <ul>
+
+                <li><a href="index.html">Inicio</a></li>
+
+                <li class="dropdown">
+                    <a href="quienes-somos.html">Institucional</a>
+                    <div class="dropdown-menu">
+                        <a href="quienes-somos.html">Quiénes somos</a>
+                        <a href="gobierno-escolar.html">Gobierno escolar</a>
+                        <a href="manual-de-convivencia.html">Manual de convivencia</a>
+                    </div>
+                </li>
+
+                <li><a href="academica.html">Académica</a></li>
+
+                <li><a href="noticias.html">Noticias</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="pqrs.html">PQRS</a></li>
+
+                <li><a href="transparencia.html">Transparencia</a></li>
+                <li><a href="preguntas-frecuentes.html">Preguntas frecuentes</a></li>
+                <li><a href="area-tecnica.html">Área técnica</a></li>
+                <li><a href="orientacion-escolar.html">Orientación escolar</a></li>
+
+            </ul>
+        </nav>
+
+    </div>
+</header>
+
+<section class="hero" style="height:60vh;">
+
+    <div class="slides">
+        <div class="slide active" style="background-image:url('assets/img/formacion.jpeg')"></div>
+    </div>
+
+    <div class="hero-content">
+        <h1>NOTICIAS INSTITUCIONALES</h1>
+        <p>Información y acontecimientos de la comunidad educativa</p>
+    </div>
+
+</section>
+
+<main>
+
+<section class="section">
+
+    <h2 class="separador">Noticias Destacadas</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Inicio del periodo académico</h3>
+            <p>La institución da apertura al nuevo periodo académico, dando la bienvenida a estudiantes, docentes y familias.</p>
+        </div>
+
+        <div class="card">
+            <h3>Jornada deportiva institucional</h3>
+            <p>Actividades recreativas y deportivas con participación de toda la comunidad educativa.</p>
+        </div>
+
+        <div class="card">
+            <h3>Entrega de informes académicos</h3>
+            <p>Socialización de resultados del periodo académico vigente.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="section section-alt">
+
+    <h2 class="separador">Comunicados</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Calendario Académico</h3>
+            <p>Fechas oficiales de actividades institucionales.</p>
+        </div>
+
+        <div class="card">
+            <h3>Reunión de Padres de Familia</h3>
+            <p>Encuentros de seguimiento académico y convivencia.</p>
+        </div>
+
+        <div class="card">
+            <h3>Actividades Institucionales</h3>
+            <p>Programación de eventos académicos y culturales.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="section">
+
+    <h2 class="separador">Información General</h2>
+
+    <div class="info-grid">
+
+        <div class="bloque">
+            <h3>Noticias Académicas</h3>
+            <p>Publicación de actividades pedagógicas y proyectos.</p>
+        </div>
+
+        <div class="bloque">
+            <h3>Eventos Institucionales</h3>
+            <p>Actividades culturales, deportivas y comunitarias.</p>
+        </div>
+
+        <div class="bloque">
+            <h3>Comunidad Educativa</h3>
+            <p>Información para estudiantes, padres y docentes.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="section">
+
+    <h2 class="separador">Noticias Actualizadas</h2>
+
+    <div id="noticias-dinamicas" class="cards">
+
+        <p id="loaderNoticias">Cargando noticias...</p>
+
+    </div>
+
+</section>
+
+</main>
+
+<footer class="footer">
+
+    <div class="footer-grid">
+
+        <div>
+            <h3>Institución</h3>
+            <p>IEM Ciudad Eben Ezer</p>
+        </div>
+
+        <div>
+            <h3>Contacto</h3>
+            <p>Fusagasugá, Colombia</p>
+        </div>
+
+        <div>
+            <h3>Enlaces</h3>
+            <p>Manual de convivencia | PQRS</p>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2026 IEM Ciudad Eben Ezer - Todos los derechos reservados
+    </div>
+
+</footer>
+
+<script src="assets/js/script.js"></script>
+
+<script>
+
+const SHEET_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vS9zjN8DE09XyNuBcF-55tkDazbnuiP3aVC4wMNxVaojmNEwOcV5YCOMxxmuDyAz_CV9Q7hgBnM7AZW/pub?gid=0&single=true&output=csv";
+
+let cacheNoticias = null;
+
+function formatearFecha(fecha) {
+    if (!fecha) return "";
+    if (fecha.includes("-")) {
+        const [y,m,d] = fecha.split("-");
+        return `${d}/${m}/${y}`;
+    }
+    return fecha;
+}
+
+/* 🔥 FIX REAL: soporta comas en descripción */
+function parseCSV(text) {
+    const lines = text.split("\n").filter(l => l.trim() !== "");
+
+    return lines.slice(1).map(line => {
+
+        // 🔥 FIX: solo separa 3 primeras columnas, lo demás es descripción/imagen
+        const firstSplit = line.split(",");
+
+        return {
+            titulo: firstSplit[0] || "",
+            fecha: firstSplit[1] || "",
+
+            // todo lo demás hasta antes de imagen se mantiene unido
+            descripcion: firstSplit.slice(2, firstSplit.length - 1).join(",") || "",
+
+            imagen: firstSplit[firstSplit.length - 1] || ""
+        };
+    });
+}
+
+function ordenar(data) {
+    return data.sort((a, b) => {
+        return new Date(b.fecha.replace(/'/g, "")) - new Date(a.fecha.replace(/'/g, ""));
+    });
+}
+
+function renderNoticias(noticias) {
+
+    const contenedor = document.getElementById("noticias-dinamicas");
+    contenedor.innerHTML = "";
+
+    noticias.forEach(n => {
+
+        if (!n.titulo) return;
+
+        const card = document.createElement("div");
+        card.className = "card";
+
+        let img = "";
+
+        if (n.imagen && n.imagen.trim() !== "") {
+
+            let url = n.imagen.trim();
+
+            const match = url.match(/\/d\/(.*?)\//);
+
+            if (match && match[1]) {
+                url = `https://drive.google.com/uc?export=view&id=${match[1]}`;
+            }
+
+            img = `
+                <img src="${url}"
+                     style="width:100%;border-radius:8px;margin-bottom:10px;"
+                     onerror="this.style.display='none'">
+            `;
+        }
+
+        card.innerHTML = `
+            ${img}
+            <h3>${n.titulo}</h3>
+            <small>${formatearFecha(n.fecha)}</small>
+            <p>${n.descripcion}</p>
+        `;
+
+        contenedor.appendChild(card);
+    });
+}
+
+async function cargarNoticias() {
+
+    const loader = document.getElementById("loaderNoticias");
+
+    try {
+
+        if (cacheNoticias) {
+            renderNoticias(cacheNoticias);
+            return;
+        }
+
+        const res = await fetch(SHEET_URL);
+        const text = await res.text();
+
+        let data = parseCSV(text);
+        data = ordenar(data);
+
+        cacheNoticias = data;
+
+        if (loader) loader.remove();
+
+        renderNoticias(data);
+
+    } catch (e) {
+
+        console.error(e);
+
+        document.getElementById("noticias-dinamicas").innerHTML =
+            "<p>Error cargando noticias.</p>";
+    }
+}
+
+cargarNoticias();
+
+</script>
+
+</body>
+</html>

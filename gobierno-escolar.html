@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gobierno Escolar | IEM Ciudad Eben Ezer</title>
+
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <!-- Fade-in -->
+    <style>
+        body{
+            opacity:0;
+            animation:fadeIn .6s ease forwards;
+        }
+
+        @keyframes fadeIn{
+            to{ opacity:1; }
+        }
+
+        /* Acordeón simple sin tocar CSS base */
+        .accordion{
+            max-width:900px;
+            margin:auto;
+        }
+
+        .accordion-item{
+            margin-bottom:12px;
+            border-radius:8px;
+            overflow:hidden;
+            box-shadow:0 4px 12px rgba(0,0,0,.08);
+        }
+
+        .accordion-title{
+            background:#1E3A5F;
+            color:white;
+            padding:15px;
+            cursor:pointer;
+            font-weight:bold;
+        }
+
+        .accordion-content{
+            display:none;
+            padding:15px;
+            background:#fff;
+        }
+
+        .accordion-item.active .accordion-content{
+            display:block;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- ================= HEADER / NAVBAR (SINCRONIZADO CON INDEX) ================= -->
+<header class="header">
+    <div class="navbar-unificada">
+
+        <div class="navbar-left">
+            <img src="assets/img/escudo.png" alt="Logo Institución" class="logo">
+
+            <div class="navbar-texto">
+                <h1>IEM Ciudad Eben Ezer</h1>
+                <p>Fusagasugá - Institución Educativa Municipal</p>
+            </div>
+        </div>
+
+        <nav class="navbar-right">
+            <ul>
+
+                <li><a href="index.html">Inicio</a></li>
+
+                <li class="dropdown">
+                    <a href="quienes-somos.html">Institucional</a>
+                    <div class="dropdown-menu">
+                        <a href="quienes-somos.html">Quiénes somos</a>
+                        <a href="gobierno-escolar.html">Gobierno escolar</a>
+                        <a href="manual-de-convivencia.html">Manual de convivencia</a>
+                    </div>
+                </li>
+
+                <li class="dropdown">
+                    <a href="academica.html">Académica</a>
+                    <div class="dropdown-menu">
+                        <a href="academica.html">Académica</a>
+                        <a href="plan-de-estudios.html">Plan de estudios</a>
+                    </div>
+                </li>
+
+                <li><a href="noticias.html">Noticias</a></li>
+
+                <li><a href="galeria.html">Galería</a></li>
+
+                <li><a href="pqrs.html">PQRS</a></li>
+
+                <li><a href="transparencia.html">Transparencia</a></li>
+
+                <li><a href="preguntas-frecuentes.html">Preguntas frecuentes</a></li>
+
+                <li><a href="area-tecnica.html">Área técnica</a></li>
+
+                <li><a href="orientacion-escolar.html">Orientación escolar</a></li>
+
+            </ul>
+        </nav>
+
+    </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero" style="height:55vh;">
+    <div class="hero-content">
+        <h1>Gobierno Escolar</h1>
+        <p>Organización democrática institucional</p>
+    </div>
+
+    <div class="slide active" style="background-image:url('assets/img/entrada.jpeg')"></div>
+</section>
+
+<main>
+
+<!-- ================= INTRO ================= -->
+<section class="section">
+    <h2 class="separador">¿Qué es el Gobierno Escolar?</h2>
+
+    <div class="bloque">
+        <p>
+            Es el conjunto de instancias que permiten la participación democrática de la comunidad educativa
+            en la toma de decisiones institucionales.
+        </p>
+    </div>
+</section>
+
+<!-- ================= ACORDEÓN ================= -->
+<section class="section section-alt">
+
+    <h2 class="separador">Estructura del Gobierno Escolar</h2>
+
+    <div class="accordion">
+
+        <div class="accordion-item">
+            <div class="accordion-title">Rectoría</div>
+            <div class="accordion-content">
+                <p><strong>Rector:</strong> Guillermo Rodríguez Forero</p>
+                <p>Dirige la institución y garantiza el cumplimiento del PEI.</p>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <div class="accordion-title">Consejo Directivo</div>
+            <div class="accordion-content">
+                <p>Máximo órgano de participación institucional.</p>
+                <ul>
+                    <li>Representantes docentes</li>
+                    <li>Representantes padres de familia</li>
+                    <li>Representante estudiantil</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <div class="accordion-title">Consejo Académico</div>
+            <div class="accordion-content">
+                <p>Encargado de orientar procesos pedagógicos y curriculares.</p>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <div class="accordion-title">Consejo Estudiantil</div>
+            <div class="accordion-content">
+                <p>Representa la voz de los estudiantes en la institución.</p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= REPRESENTACIÓN ESTUDIANTIL ================= -->
+<section class="section">
+
+    <h2 class="separador">Representación Estudiantil</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Personero estudiantil</h3>
+            <p>Defiende los derechos de los estudiantes ante la institución.</p>
+        </div>
+
+        <div class="card">
+            <h3>Contralor estudiantil</h3>
+            <p>Vigila el uso adecuado de los recursos públicos.</p>
+        </div>
+
+        <div class="card">
+            <h3>Representante estudiantil</h3>
+            <p>Participa en el Consejo Directivo defendiendo intereses estudiantiles.</p>
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+
+    <div class="footer-grid">
+
+        <div>
+            <h3>Institución</h3>
+            <p>IEM Ciudad Eben Ezer</p>
+        </div>
+
+        <div>
+            <h3>Contacto</h3>
+            <p>Fusagasugá, Colombia</p>
+        </div>
+
+        <div>
+            <h3>Enlaces</h3>
+            <p>Manual de convivencia | PQRS</p>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2026 IEM Ciudad Eben Ezer - Todos los derechos reservados
+    </div>
+
+</footer>
+
+<!-- JS acordeón -->
+<script>
+document.querySelectorAll(".accordion-title").forEach(item => {
+    item.addEventListener("click", () => {
+        const parent = item.parentElement;
+        parent.classList.toggle("active");
+    });
+});
+</script>
+
+<script src="assets/js/script.js"></script>
+
+</body>
+</html>
